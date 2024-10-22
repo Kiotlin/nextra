@@ -43,6 +43,8 @@ export function Collapse({
       animationRef.current = window.setTimeout(() => {
         // should be style property in kebab-case, not CSS class name
         container.style.removeProperty('height')
+        container.style.removeProperty('width')
+        child.style.removeProperty('width')
       }, openDuration)
     } else {
       setTimeout(() => {
